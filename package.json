@@ -1,0 +1,22 @@
+{
+  "name": "airconsole-controls",
+  "version": "1.0.0",
+  "description": "Here you'll find components to build controllers for [AirConsole](http://www.airconsole.com/).",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frozenfire92/airconsole-controls.git"
+  },
+  "author": "",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/Frozenfire92/airconsole-controls/issues"
+  },
+  "homepage": "https://github.com/Frozenfire92/airconsole-controls#readme"
+}
