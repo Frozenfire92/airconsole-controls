@@ -111,9 +111,9 @@ SwipeAnalog.prototype = {
   onTouchMove: function(e) {
     if (this.is_touch_down) {
       this.setEndPosition(e);
-      this.move_cb(e);
-      if (this.has_triggered_for_current_swipe && !this.is_slingshot) return;
       var swipe_vector = this.getSwipeVector(e);
+      this.move_cb(swipe_vector);
+      if (this.has_triggered_for_current_swipe && !this.is_slingshot) return;
       if (swipe_vector) {
         this.has_triggered_for_current_swipe = true;
         this.trigger_cb(swipe_vector);
@@ -129,7 +129,7 @@ SwipeAnalog.prototype = {
   onTouchEnd: function(e) {
     this.is_touch_down = false;
     this.setEndPosition(e);
-    this.end_cb(e, this.has_triggered_for_current_swipe);
+    this.end_cb(this.getSwipeVector(e));
     this.has_triggered_for_current_swipe = false;
     this.container.className = this.container.className.replace(/ button\-active/g, "");
     e.preventDefault();
